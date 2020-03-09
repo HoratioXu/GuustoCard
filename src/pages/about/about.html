@@ -1,0 +1,26 @@
+<ion-header>
+  <ion-searchbar (ionInput)="filter($event)"></ion-searchbar>
+</ion-header>
+
+<ion-content padding>
+
+  <ion-list>
+    <ion-item no-lines [ngClass]="{'activatedBackground': selectedList[item.id]}" *ngFor="let item of merchants" (click)="selectItem(item)">
+      <ion-thumbnail item-left>
+        <img src="{{item.image}}"/>
+      </ion-thumbnail>
+      <strong>{{ item.name }}</strong>
+      <P>{{ item.shoppingOption }}</P>
+      <P>${{ item.minAmount }}&nbsp;-&nbsp;{{ item.maxAmount }}</P>
+      <a class="link" href={{item.website}} target="view_window">view website</a>
+    </ion-item>
+  </ion-list>
+</ion-content>
+
+<ion-footer no-border>
+  <ion-toolbar class="custmizedToolBar">
+    <button ion-button block outline color="mainTheme" (click)="cancelBtn()">Cancel</button>
+    <button ion-button block color="lgrey" (click)="selectBtn()">Select</button>
+  </ion-toolbar>
+</ion-footer>
+

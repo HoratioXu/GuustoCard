@@ -1,0 +1,23 @@
+<ion-content>
+  <div class="box">
+    <div class="imgBox">
+    </div>
+    <h2>Select Merchant</h2>
+    <div class="select">
+      <ion-thumbnail class="merchant">
+        <img src="{{selectedMerchant.image}}"/>
+      </ion-thumbnail>
+      <button ion-button block outline color="mainTheme" (click)="remove()">Remove</button>
+    </div>
+    <div class="setMoney">
+      <strong style="font-size: 1.6rem">Set value</strong>
+      <h2>${{price}}</h2>
+      <ion-item no-lines class="noPad">
+        <ion-range color="mainTheme" [(ngModel)]="price">
+        </ion-range>
+      </ion-item>
+    </div>
+
+  </div>
+
+</ion-content>

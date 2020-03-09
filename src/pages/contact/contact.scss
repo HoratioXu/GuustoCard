@@ -1,0 +1,42 @@
+page-contact {
+  .noPad{
+    padding: 0;
+  }
+  .box{
+    padding: 0 5vw;
+    .imgBox{
+      margin-top: 4vw;
+      width: 100%;
+      height: 40vw;
+      border: solid 1px black;
+      background-image: url("../../assets/imgs/guustoCard.png");
+      background-position:center center;
+      background-size: cover;
+    }
+    h2{
+      margin-top: 7vh;
+    }
+    .select{
+      margin-top: 5vh;
+      .merchant{
+        text-align: center;
+        img{
+          display: inline-block;
+          max-width: 100px;
+        }
+      }
+      button{
+        margin-top: 2vh;
+      }
+    }
+    .setMoney{
+      margin-top: 5vh;
+      h2{
+        margin: 0;
+        display: inline-block;
+        color: color($colors,mainTheme);
+        float: right;
+      }
+    }
+  }
+}

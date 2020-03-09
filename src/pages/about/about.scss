@@ -1,0 +1,19 @@
+page-about {
+
+  .link{
+    text-decoration: none;
+    color: color($colors, mainTheme);
+  }
+  .custmizedToolBar {
+    .toolbar-background-md{
+      background: transparent !important;
+    }
+    button:nth-child(2){
+      color: white;
+    }
+  }
+  .activatedBackground{
+    background: lightgrey;
+  }
+
+}
