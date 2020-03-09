@@ -17,6 +17,10 @@ export class AboutPage {
     this.getMerchant();
   }
 
+  ionViewWillEnter(){
+    this.clearSelectedItem();
+  }
+
   setMerchant() {
     this.merchants = this.buffer;
     this.clearSelectedItem();
@@ -65,7 +69,6 @@ export class AboutPage {
   selectBtn() {
     if(this.selectedItem !== undefined){
       this.navCtrl.push(ContactPage, {merchant: this.selectedItem}).then(()=>{
-        this.clearSelectedItem();
       });
     }
   }

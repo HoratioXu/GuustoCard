@@ -11,8 +11,11 @@ export class ContactPage {
   selectedMerchant:any;
 
   constructor(public navCtrl: NavController, public navParams: NavParams) {
-    this.selectedMerchant = navParams.get('merchant');
-    console.log(this.selectedMerchant);
+    this.selectedMerchant = this.navParams.get('merchant');
+  }
+
+  ionViewWillEnter(){
+    this.selectedMerchant = this.navParams.get('merchant');
   }
 
   remove() {
